@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCodien</title>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css.') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css.map') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.css') }}">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GreenCodien {{ title }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/views">Terms and conditions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/views/Privacy-Policy">Policy Privacy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/views/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer text-center py-3">
+        <p class="text-center socials">
+            <ul class="flex flex-sm-row socials">
+                <li><a href="www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="www.linkin.com">Linkin</a></li>
+                <li><a href="www.youtube.com">YouTube</a></li>
+            </ul>
+        </p>
+        <p>Copyright &copy; 2021 - <span id="time"></span>  GreenCodien. All rights reserved.</p>
+    </footer>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script> const date = new Date().getFullYear();
+    document.getElementById('time').innerHTML = date;
+
+    const Facebook = ()=>{
+  window.open('www.facebook.com', '_blank' , "width=600,height=400,resizeable=yes");
+
+    }
+    const Linkin = ()=>{
+        window.open('www.linkin.com', '_blank' , "width=600,height=400,resizeable=yes");
+    }
+    const YouTube = ()=>{
+        window.open('www.youtube.com', '_blank' , "width=600,height=400,resizeable=yes");
+    }
+    </script>
+    <!-- Local Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js.map') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js.map') }}"></script>
+
+</body>
+</html>
